@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="91e3ab3b-308c-4af1-b8ed-55b44b112874">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="240"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="2b878e2f-7057-4d86-aa60-c544d71e20e6"/>
+
+	<parameter name="report_id" isForPrompting="false" class="java.lang.String">
+        <defaultValueExpression><![CDATA["<parameter error>"]]></defaultValueExpression>
+    </parameter>
+	<queryString>
+		<![CDATA[select * from well where id=cast($P{report_id} as bigint)]]>
+	</queryString>
+
+	<field name="id" class="java.lang.String"/>
+	<field name="version" class="java.lang.Long"/>
+	<field name="abstraction_type" class="java.lang.String"/>
+	<field name="bacteriological" class="java.lang.String"/>
+	<field name="casing_type" class="java.lang.String"/>
+	<field name="comments" class="java.lang.String"/>
+	<field name="contamination_dist" class="java.lang.String"/>
+	<field name="contamination_source" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="diameter_internal" class="java.lang.String"/>
+	<field name="distance_to_water_table" class="java.lang.String"/>
+	<field name="fencing_condition" class="java.lang.String"/>
+	<field name="fencing_material" class="java.lang.String"/>
+	<field name="household_usage" class="java.lang.String"/>
+	<field name="island" class="java.lang.String"/>
+	<field name="nitrate_nitrite" class="java.lang.String"/>
+	<field name="parapet_height" class="java.lang.String"/>
+	<field name="people_usage" class="java.lang.String"/>
+	<field name="photo" class="java.lang.String"/>
+	<field name="pump_status" class="java.lang.String"/>
+	<field name="salinity_base_m_scm" class="java.lang.String"/>
+	<field name="salinity_top_m_scm" class="java.lang.String"/>
+	<field name="team" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<field name="total_depth" class="java.lang.String"/>
+	<field name="use_of_water" class="java.lang.String"/>
+	<field name="village_name" class="java.lang.String"/>
+	<field name="well_apron_condition" class="java.lang.String"/>
+	<field name="well_apron_material" class="java.lang.String"/>
+	<field name="well_apron_size" class="java.lang.String"/>
+	<field name="well_cover" class="java.lang.String"/>
+	<field name="well_cover_condition" class="java.lang.String"/>
+	<field name="well_cover_material" class="java.lang.String"/>
+	<field name="wellid" class="java.lang.String"/>
+	<field name="well_improvements1" class="java.lang.String"/>
+	<field name="well_improvements2" class="java.lang.String"/>
+	<field name="well_improvements3" class="java.lang.String"/>
+	<field name="well_owner" class="java.lang.String"/>
+	<field name="well_type" class="java.lang.String"/>
+	<field name="latitude" class="java.lang.String"/>
+	<field name="longitude" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="7842b2ab-aa9b-42ed-98b7-57d4e35eab25" mode="Opaque" x="-17" y="-21" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="ac8d9ca2-4e73-494d-8b6f-1b665a6f01a1" x="167" y="10" width="277" height="42" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[KIRIWATSAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f0b7fe1e-ed84-45a9-88cb-e9506d17d17b" x="167" y="52" width="277" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Water Resources Assessment]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="45a909ec-65e6-47ab-87c7-a482c3ba93ee" x="167" y="72" width="277" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Well Survery]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="595">
+			<rectangle>
+				<reportElement uuid="652248d4-e7bc-43c6-b547-452bdbb89325" x="0" y="460" width="555" height="116"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5267d110-7c82-4fd8-b1c2-c5265a116f5d" x="0" y="331" width="236" height="114"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f35d1dbd-69c1-421a-b6a5-392078d0357d" x="252" y="331" width="303" height="114"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="eea9952f-6c9d-4fe7-864d-1c32915abf7a" x="252" y="135" width="303" height="184"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="6c3dbd65-f731-4585-b6e0-e7f4065264d4" style="table" positionType="Float" x="100" y="20" width="100" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{island}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d20b8fa-776c-4374-a54f-6a875371667c" style="table" x="100" y="40" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{village_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bab5d023-c513-4dad-8e17-e7bad3ef4127" style="table" x="100" y="60" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wellid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="86e91b03-82f4-432f-9abc-4dd3c41dc1e4" x="455" y="0" width="100" height="20" forecolor="#999999"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e4fce15c-dc2b-4a57-ba03-c1db2e9ed5e5" style="table" x="100" y="80" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{well_owner}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="15045895-693f-4ba7-b62a-afa30f555954" style="table" mode="Transparent" x="0" y="20" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Island Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9e913141-2cef-49d0-86b3-4d4da17cc6c5" style="table" mode="Transparent" x="0" y="40" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Village Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6980526-e372-4b21-bdd3-fd3713e57624" style="table" mode="Transparent" x="0" y="60" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Well Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fcf45131-ffcb-4c9a-a838-b36164f6a0a0" style="table" mode="Transparent" x="0" y="80" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Well Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="17fbd397-fab7-41ca-a3e5-fadd56446cc7" style="table" mode="Transparent" x="299" y="80" width="141" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Latitude]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb6a04a5-a17f-4223-b467-8be9f89f136a" style="table" mode="Transparent" x="299" y="20" width="141" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="63ff015d-e230-445d-bf73-db1ad9371c43" style="table" mode="Transparent" x="299" y="40" width="141" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[No. Households]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d1cc126a-256a-48f6-99f2-3d69e20b3ef6" style="table" mode="Transparent" x="299" y="60" width="141" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[No. People using Well]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bf4489b1-45f3-491d-9d0e-938b637272cf" style="table" x="440" y="20" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8043cc3b-3de1-4d5a-b987-cafb30d2ab79" style="table" x="440" y="60" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{people_usage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ebde7bd2-9e2b-4931-bb66-b4aa0aa569bd" style="table" x="440" y="40" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{household_usage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f1fb252e-c477-43c4-9915-08779a1c2675" style="table" x="440" y="80" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{latitude}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="75378829-b697-4be4-9128-e212b51853a9" style="table" x="440" y="100" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{longitude}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d76a7d5d-4d80-465f-b45b-f9d86e32a217" style="table" mode="Transparent" x="299" y="100" width="141" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Longitude]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ba9e8de-a11a-4132-b91b-c9dd8e12c530" x="264" y="139" width="277" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Well Characteristics]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8fc3dc8c-3782-4563-a31d-db4b24bba483" x="264" y="179" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Well Covering:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0c2a5722-1842-40fd-beb1-e211f6d6a50d" x="399" y="179" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{well_cover}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7266da7b-3ccf-4f5f-a138-e27254a18836" x="399" y="159" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{casing_type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a7afe2cb-7850-4741-8ec0-fe5121b50392" x="264" y="159" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Casing Type:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a2844410-1238-45f9-a272-5f78db27f512" x="399" y="199" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{well_apron_material}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="05eee7c8-c60e-42d8-bdf0-25eb5c0ea470" x="264" y="199" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Well Apron:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1acc8e84-accc-41be-98ad-2bd8ebbda898" x="399" y="219" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fencing_material}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="749f0277-4897-49c0-9e8f-3a64c875bc71" x="264" y="219" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Well Fence:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5e8ecbae-1fc1-4227-b948-89f0836a01e0" x="399" y="299" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{use_of_water}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="41e23f9e-c213-439d-b1e0-4b3135c9e5b4" x="264" y="299" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Use:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ad8ec9b1-4e40-44d6-8790-4c08a74d647f" x="399" y="239" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{abstraction_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0beb4ef6-b1e0-4f5e-b067-d540a3aa302e" x="399" y="259" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{contamination_source}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e0de588a-7d19-461a-9b12-e7ffab076b58" x="399" y="279" width="142" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{contamination_dist}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="30ab198c-6cea-47a5-84e5-47f8e53c5031" x="264" y="239" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Abstraction Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f2f8dccf-686f-415f-b488-285d27a503fb" x="264" y="259" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Contamination Source:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cf98fdd-54cc-44e6-aa8d-754cdfacae5f" x="264" y="279" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Contamination Distance:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fe58a9ae-1669-4e4c-bd9c-458edadfea2a" x="264" y="339" width="277" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Water Chemistry]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="67b19ce5-f4e2-41f6-b560-18f16a2bb73e" x="399" y="359" width="142" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{salinity_top_m_scm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="41414bfc-41f0-419f-b2a1-426f2277a22f" x="264" y="359" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Salinity Top (mS/cm):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d4c31fda-a8a8-4ade-85df-c053316e0cab" x="264" y="379" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Salinity Bottom (mS/cm):]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="79953d1e-3181-4639-a304-e5e8342c8a0f" x="399" y="379" width="142" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{salinity_base_m_scm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bc61822b-5eea-4eb2-9a0d-6e4e8b6dcdab" x="399" y="399" width="142" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nitrate_nitrite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c477fa52-3b98-464c-b418-7a427dada699" x="264" y="399" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nitrate NO2:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2ce91763-65e1-4eaf-9842-7e5e3422fc2d" x="399" y="419" width="142" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bacteriological}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e4010292-81ca-452a-ae61-9c3ed4ff3ebb" x="264" y="419" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bacteriological:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="364ad420-f8f6-4603-9c33-d07c9c0b0d0a" x="11" y="339" width="215" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Water Dimensions]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="246cae7e-97d3-4c7e-93aa-07af28b68daa" x="167" y="359" width="59" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{diameter_internal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3e795978-2539-480f-848b-72a63d5c7bd6" x="11" y="359" width="156" height="20"/>
+				<textElement/>
+				<text><![CDATA[Internal Well Diameter:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b92bb3da-9aa3-4a9f-bbdc-dd13372ae817" x="167" y="379" width="59" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{parapet_height}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="185aff00-32e2-4696-94cb-f31896bfcfbe" x="167" y="419" width="59" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total_depth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7856f045-a99a-4d12-a5ce-9cb7700efe65" x="167" y="399" width="59" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{distance_to_water_table}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="83471b12-6ca6-4947-b97f-e8fe619406c1" x="11" y="379" width="156" height="20"/>
+				<textElement/>
+				<text><![CDATA[Parapet Height Above Ground:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d2b2b034-c45a-4a76-abc6-ed83c4d83592" x="11" y="399" width="156" height="20"/>
+				<textElement/>
+				<text><![CDATA[Depth to Water (mbgl):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e58ea1c7-b867-4c31-9878-41a7ac019ed5" x="11" y="419" width="156" height="20"/>
+				<textElement/>
+				<text><![CDATA[Total Depth of Well (mbgl):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="071e175b-584f-495c-9213-72aa75dbbde5" x="11" y="470" width="215" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comments and Recommendations]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2e2f318e-0a91-47f1-ba30-605ac822902c" x="11" y="490" width="530" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{comments}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="735b42ba-b174-4782-bfb7-5dc8d8eac070" x="11" y="510" width="530" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{well_improvements1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4dee9272-c12a-414c-9cd8-94b97f9d383a" x="11" y="530" width="530" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{well_improvements2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b0f8db14-3697-4bf4-ba1a-75a7d45ece69" x="11" y="550" width="530" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{well_improvements3}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="c85bb1ff-8788-411b-960b-f6668a553686" x="0" y="135" width="236" height="184"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+				<imageExpression><![CDATA["http://ict.sopac.org/kiriwatsan/report/photo?id=" + $F{id}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="98">
+			<textField>
+				<reportElement uuid="5d3af001-fa56-4abd-acc0-1399e8a80e7f" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="5e60efff-b1d8-4481-bf03-79b8bca2b70d" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="e19e47a8-34ea-4bdf-ba85-f25e8e25a8ec" x="0" y="4" width="264" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement uuid="d937824e-e6c0-4f4f-b37a-c2bd7665d220" x="150" y="28" width="138" height="62"/>
+				<imageExpression><![CDATA["http://ict.sopac.org/kiriwatsan/static/images/spc.png"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement uuid="082e2acd-e8fa-4f90-a890-d2bf05fb3938" x="0" y="28" width="138" height="62"/>
+				<imageExpression><![CDATA["http://ict.sopac.org/img/eu-flag.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement uuid="f9e5eafa-8971-4124-ae21-686f3ef4cddc" x="299" y="17" width="128" height="81"/>
+				<imageExpression><![CDATA["http://ict.sopac.org/kiriwatsan/static/images/unicef.png"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement uuid="aa942001-a87b-41e0-81f4-f9a335e40534" x="427" y="28" width="126" height="62"/>
+				<imageExpression><![CDATA["http://ict.sopac.org/kiriwatsan/static/images/kiribati.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

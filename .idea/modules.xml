@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kiriwatsan.iml" filepath="$PROJECT_DIR$/Kiriwatsan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kiriwatsan-grailsPlugins.iml" filepath="$PROJECT_DIR$/Kiriwatsan-grailsPlugins.iml" />
+    </modules>
+  </component>
+</project>
+

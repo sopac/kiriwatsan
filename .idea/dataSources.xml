@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1593398658">
+    <data-source source="LOCAL" name="Kiriwatsan dev" uuid="3f93943f-2dcb-4c47-9120-993bd7ced9fd">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost/kiriwatsan_db</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfcfdfd8dfc6dfcbdfc4dfcddf9edf9e</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.grails/ivy-cache/postgresql/postgresql/jars/postgresql-9.1-901-1.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
